@@ -1,0 +1,168 @@
+.hide {
+    display: none !important;
+}
+
+.hide-children * {
+    display: none !important;
+}
+body {
+    margin:0;
+    padding:0;
+    background-color: #E7E1DB;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.App {
+   display: flex; 
+
+}
+
+.Side {
+    background-color:#fff;
+    min-width: 340px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.Side-header {
+    background: #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+
+}
+.Side-header img {
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+.BtnGroup {
+
+}
+.Menu {
+    display: inline-block;
+}
+button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button i {
+    font-size: 1.5em;
+    color: #444;
+}
+.Chat {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex:1;
+    height: 100vh;
+}
+.Chat-main {
+    padding: 40px;
+    flex:1;
+}
+.Chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #EEEEEE;
+    height: 70px;
+    width: 100%;
+}
+.UserInfo {
+    display: flex;
+   align-items: center;
+   margin-left: 20px;
+}
+.UserInfo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.UserInfo-info {
+    margin-left: 10px;
+}
+.UserInfo-name {
+    color: blue;
+    font-weight: bold;
+}
+.UserInfo-status {
+    color: #888;
+}
+.BtnGroup {
+    margin-right: 30px;
+}
+
+.Side-search {
+    padding: 10px;
+    position: relative;
+}
+.Search-input {
+   padding-left: 30px;
+    width: 85%;
+    height: 40px;
+    font-size: 0.8em;
+    outline: none;
+}
+.Side-main {
+    width: 100%;
+    flex: 1;
+    overflow: auto;
+}
+.Side-main ul li{
+    display: flex;
+    border-top: 1px solid #EDEAE6;
+    border-bottom: 1px solid #EDEAE6;
+    padding: 10px;
+}
+.Search-icon {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+.ChatTabs {
+    padding:0;
+    list-style-type: none;
+}
+.ChatTab {
+    align-items: center;
+}
+.ChatTab-avatar {
+    margin: 0 10px 0 10px;
+}
+.ChatTab-info {
+    line-height: 10px;
+}
+.ChatTab-avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.ChatTab-header {
+    display: flex;
+    justify-content: space-between;
+}
+.ChatTab-preview {
+    display: flex;
+    color: #888;
+    font-size: 0.9em;
+}
+.ChatTab-name {
+    color: blue;
+}
+Time {
+    color: #888;
+    font-size: 0.8em;
+}
+/* FOOTER */
+
+.Chat-footer {
+
+    height: 50px;
+    background: #EEEEEE;
+}
