@@ -7,15 +7,14 @@ inputNode.addEventListener('keydown', event => {
 
     // on any key other than Enter, continue as normal
     //if (event.keyCode !== 13 ) return;
-   
+   let msgNode = '';
+
     if (event.keyCode === 17) {
-  
-        const msgNode = historyNode.querySelector('.Message--in').cloneNode(true);
-        console.log(event.keyCode);
+         msgNode = historyNode.querySelector('.Message--in').cloneNode(true);
     }
     else if ( event.keyCode === 13 ) {
         // on Enter key pressed, clone the first message, change its content and prepend
-       const  msgNode = historyNode.querySelector('.Message--out').cloneNode(true);
+         msgNode = historyNode.querySelector('.Message--out').cloneNode(true);
     } else {
         
         return;
@@ -23,9 +22,7 @@ inputNode.addEventListener('keydown', event => {
     
     event.preventDefault();
 
-    
-  
-        msgNode.querySelector('.Message-content').textContent = event.target.value;
+    msgNode.querySelector('.Message-content').textContent = event.target.value;
 
     historyNode.prepend(msgNode);
 
