@@ -4,14 +4,28 @@ const historyNode = document.querySelector('.Chat-main');
 const inputNode = document.querySelector('#new-msg');
 
 inputNode.addEventListener('keydown', event => {
-    // on any key other than Enter, continue as normal
-    if (event.keyCode !== 13) return;
 
+    // on any key other than Enter, continue as normal
+    //if (event.keyCode !== 13 ) return;
+   
+    if (event.keyCode === 17) {
+  
+        const msgNode = historyNode.querySelector('.Message--in').cloneNode(true);
+        console.log(event.keyCode);
+    }
+    else if ( event.keyCode === 13 ) {
+        // on Enter key pressed, clone the first message, change its content and prepend
+       const  msgNode = historyNode.querySelector('.Message--out').cloneNode(true);
+    } else {
+        
+        return;
+    }
+    
     event.preventDefault();
 
-    // on Enter key pressed, clone the first message, change its content and prepend
-    const msgNode = historyNode.firstElementChild.cloneNode(true);
-    msgNode.querySelector('.Message-content').textContent = event.target.value;
+    
+  
+        msgNode.querySelector('.Message-content').textContent = event.target.value;
 
     historyNode.prepend(msgNode);
 

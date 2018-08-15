@@ -63,6 +63,9 @@ button i {
     height: 100vh;
 }
 .Chat-main {
+    display:flex;
+    flex-direction: column-reverse;
+    overflow: auto;
     padding: 40px;
     flex:1;
 }
@@ -166,3 +169,73 @@ Time {
     height: 50px;
     background: #EEEEEE;
 }
+
+
+
+
+
+.Message {
+    background-color: #fff;
+    padding:10px;
+    max-width:20%;
+     margin:20px;
+     border-radius: 10px;
+     position: relative;
+  
+}
+.Message--in {
+    min-width: 200px;   
+    margin-left: auto;
+    background-color:#2E7D32;
+
+}
+.Message-content {
+    margin:0;
+}
+.Message-meta {
+    text-align: right;
+}
+.Message-menu .Menu .Menu-panel {
+    position: absolute;
+    top: 40px;
+    background-color: #fff;
+    width:100%;
+    margin-left: -30px;
+    display: none;
+}
+.Message-menu .Menu:hover .Menu-panel {
+    display: block;
+}
+.Menu-options {
+    height: auto;
+    padding: 10px;
+    
+     box-shadow: #ccc 1px 1px 1px 1px;
+}
+.Menu-options button {
+    font-size: 1em;
+    display: block;
+    margin:10px;
+}
+
+.Compose {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+.Compose-input {
+    height:30px;
+    width:90%;
+    border-radius: 50px;
+    font-size: 1.3em;
+    outline: none;
+    border: 1px solid #ccc;
+    display: block;
+    padding-left: 20px;
+     padding-top: 7px;
+}
+.Menu-panel .Menu-options{
+   
+}
+
