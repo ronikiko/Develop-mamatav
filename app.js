@@ -41,99 +41,124 @@ inputNode.addEventListener('keydown', event => {
 const users = [
     {
         avatar: 'https://randomuser.me/api/portraits/women/72.jpg',
-        name: 'Fidela Larrimore'
+        name: 'Fidela Larrimore',
+        online: false
     },
     {
         avatar: 'https://randomuser.me/api/portraits/women/47.jpg',
-        name: 'Melynda Ohlson'
+        name: 'Melynda Ohlson',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/men/15.jpg',
-        name: 'Nathan Hollenbeck'
+        name: 'Nathan Hollenbeck',
+        online: false
     },
     {
         avatar: 'https://randomuser.me/api/portraits/men/2.jpg',
-        name: 'Jamie Duca'
+        name: 'Jamie Duca',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/men/21.jpg',
-        name: 'Clyde Hosford'
+        name: 'Clyde Hosford',
+        online: false
     },
     {
         avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-        name: 'Milo Saylors'
+        name: 'Milo Saylors',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/women/72.jpg',
-        name: 'Shizue Inge'
+        name: 'Shizue Inge',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/women/31.jpg',
-        name: 'Maya Firth'
+        name: 'Maya Firth',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/women/24.jpg',
-        name: 'Taunya Lugar'
+        name: 'Taunya Lugar',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/women/65.jpg',
-        name: 'Dakota Bill'
+        name: 'Dakota Bill',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/men/46.jpg',
-        name: 'Kera Schulte'
+        name: 'Kera Schulte',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/women/72.jpg',
-        name: 'Fidela Larrimore'
+        name: 'Fidela Larrimore',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/women/47.jpg',
-        name: 'Melynda Ohlson'
+        name: 'Melynda Ohlson',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/men/15.jpg',
-        name: 'Nathan Hollenbeck'
+        name: 'Nathan Hollenbeck',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/men/2.jpg',
-        name: 'Jamie Duca'
+        name: 'Jamie Duca',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/men/21.jpg',
-        name: 'Clyde Hosford'
+        name: 'Clyde Hosford',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-        name: 'Milo Saylors'
+        name: 'Milo Saylors',
+        online: false
     },
     {
         avatar: 'https://randomuser.me/api/portraits/women/72.jpg',
-        name: 'Shizue Inge'
+        name: 'Shizue Inge',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/women/31.jpg',
-        name: 'Maya Firth'
+        name: 'Maya Firth',
+        online: false
     },
     {
         avatar: 'https://randomuser.me/api/portraits/women/24.jpg',
-        name: 'Taunya Lugar'
+        name: 'Taunya Lugar',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/women/65.jpg',
-        name: 'Dakota Bill'
+        name: 'Dakota Bill',
+        online: true
     },
     {
         avatar: 'https://randomuser.me/api/portraits/men/46.jpg',
-        name: 'Kera Schulte'
+        name: 'Kera Schulte',
+        online: false
     }
 ];
 
+
+
+// writen by roni kiko (RK)
 const chatTabs = document.querySelector('.ChatTabs');
 const chatTab = chatTabs.firstElementChild;
 
 users.forEach(user => {
-    const node = chatTab.cloneNode(true);
+    const node = chatTab.cloneNode( true );
     node.querySelector('img').src = user.avatar;
     node.querySelector('.ChatTab-name').textContent = user.name;
     chatTabs.appendChild(node);
@@ -141,19 +166,23 @@ users.forEach(user => {
 
 
 // Change the main avatar img by click on side menu image
- const avatar = document.querySelectorAll('.Avatar');
+ const avatar = document.querySelectorAll( '.Avatar' );
  // Select the avate image
- let mainAvatar = document.querySelector('#main-avatar');
+ const mainAvatar = document.querySelector( '#main-avatar' );
  // Selct the main avatar name
- let  name = document.querySelector('.UserInfo-name');
+ const  name = document.querySelector( '.UserInfo-name' );
 
 // Selecting all the users name
- const avatrName = document.querySelectorAll('.ChatTab-name');
+ const avatrName = document.querySelectorAll( '.ChatTab-name' );
+
+ const isOnline = document.querySelector('.UserInfo-status');
 
 avatar.forEach( ( ava, i ) => {
     ava.addEventListener('click', function(){
          mainAvatar.setAttribute('src', this.src);
          name.textContent = avatrName[i - 1].innerHTML;
+        // checking to see if a iser is onlie or not and print it to the screen!!!
+     const ifOnline =  (users[i - 1].online) ? isOnline.textContent = 'Online' : isOnline.textContent = 'Out';
     });
 });
 
