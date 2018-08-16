@@ -138,3 +138,24 @@ users.forEach(user => {
     node.querySelector('.ChatTab-name').textContent = user.name;
     chatTabs.appendChild(node);
 });
+
+
+// Change the main avatar img by click on side menu image
+ const avatar = document.querySelectorAll('.Avatar');
+ // Select the avate image
+ let mainAvatar = document.querySelector('#main-avatar');
+ // Selct the main avatar name
+ let  name = document.querySelector('.UserInfo-name');
+
+// Selecting all the users name
+ const avatrName = document.querySelectorAll('.ChatTab-name');
+
+avatar.forEach( ( ava, i ) => {
+    ava.addEventListener('click', function(){
+         mainAvatar.setAttribute('src', this.src);
+         name.textContent = avatrName[i - 1].innerHTML;
+    });
+});
+
+
+ 

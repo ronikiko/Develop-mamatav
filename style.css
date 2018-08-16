@@ -38,12 +38,6 @@ body {
     height:40px;
     border-radius: 50%;
 }
-.BtnGroup {
-
-}
-.Menu {
-    display: inline-block;
-}
 button {
     background: none;
     border: none;
@@ -77,6 +71,16 @@ button i {
     height: 70px;
     width: 100%;
 }
+
+.Chat-header .Menu-panel {
+    background: #fff;
+    position: absolute;
+    right: 20px;
+    top:50px;
+    display: none;
+}
+
+
 .UserInfo {
     display: flex;
    align-items: center;
@@ -98,6 +102,7 @@ button i {
     color: #888;
 }
 .BtnGroup {
+    display: flex;
     margin-right: 30px;
 }
 
@@ -111,6 +116,19 @@ button i {
     height: 40px;
     font-size: 0.8em;
     outline: none;
+}
+.Side-header .Menu-panel {
+    position: absolute;
+    background: #fff;
+    z-index: 12;
+    display: none;
+    z-index: 211212132;
+}
+#dd:hover + .Menu-panel{
+    display: block;
+}
+#rr:hover + .Menu-panel {
+  display: block;
 }
 .Side-main {
     width: 100%;
@@ -191,16 +209,24 @@ Time {
 }
 .Message-content {
     margin:0;
+    padding: 10px;
+    z-index: 1;
 }
 .Message-meta {
     text-align: right;
 }
+.Message-menu {
+    top: 5px;
+    position: absolute;
+    right: 10px;
+}
 .Message-menu .Menu .Menu-panel {
     position: absolute;
-    top: 40px;
+    min-width: 250px;
+    top: 20px;
+    right:0;
     background-color: #fff;
-    width:100%;
-    margin-left: -30px;
+    /* margin-left: -30px; */
     display: none;
 }
 .Message-menu .Menu:hover .Menu-panel {
@@ -233,9 +259,19 @@ Time {
     border: 1px solid #ccc;
     display: block;
     padding-left: 20px;
+    padding-right: 20px;
      padding-top: 7px;
 }
-.Menu-panel .Menu-options{
-   
-}
 
+
+/* Aside shearch box */
+
+.Search-input:focus + .Search-icon .fa-search {
+    display: none;
+}
+.Search-icon .fa-arrow-left {
+    display: none;
+}
+.Search-input:focus + .Search-icon .fa-arrow-left {
+    display: block;
+}
