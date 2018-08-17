@@ -13,7 +13,6 @@ body {
 }
 .App {
    display: flex; 
-
 }
 
 .Side {
@@ -152,6 +151,7 @@ button i {
 }
 .ChatTab {
     align-items: center;
+    display: inline-block;
 }
 .ChatTab-avatar {
     margin: 0 10px 0 10px;
@@ -204,7 +204,7 @@ Time {
 .Message--in {
     min-width: 200px;   
     margin-left: auto;
-    background-color:#2E7D32;
+    background-color:#00E676;
 
 }
 .Message-content {

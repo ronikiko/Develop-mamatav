@@ -15,8 +15,8 @@ inputNode.addEventListener('keydown', event => {
     else if ( event.keyCode === 13 ) {
         // on Enter key pressed, clone the first message, change its content and prepend
          msgNode = historyNode.querySelector('.Message--out').cloneNode(true);
-    } else {
-        
+    } 
+    else {
         return;
     }
     
@@ -182,9 +182,32 @@ avatar.forEach( ( ava, i ) => {
          mainAvatar.setAttribute('src', this.src);
          name.textContent = avatrName[i - 1].innerHTML;
         // checking to see if a iser is onlie or not and print it to the screen!!!
-     const ifOnline =  (users[i - 1].online) ? isOnline.textContent = 'Online' : isOnline.textContent = 'Out';
+     const ifOnline =  ( users[ i - 1 ].online ) ? isOnline.textContent = 'Online' : isOnline.textContent = 'Out';
     });
 });
 
 
- 
+// Search user filter 
+
+const searchInput = document.querySelector('.Search-input');
+
+
+searchInput.addEventListener('keyup', function(e){
+
+    const chatTab = document.querySelectorAll('.ChatTab');
+    const search = e.target.value.toLowerCase();
+
+    Array.from( avatrName ).forEach( (name, i ) => {
+
+        const newName =  name.textContent;
+        
+        if ( newName.toLowerCase().indexOf( search ) != -1 ) {
+                chatTab[i].style.display = 'flex';
+        }
+        else {
+                chatTab[i].style.display = 'none';
+        }
+    });
+
+}); 
+
