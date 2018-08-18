@@ -122,12 +122,17 @@ button i {
     z-index: 12;
     display: none;
     z-index: 211212132;
+    transition: 10s display ease;
 }
-#dd:hover + .Menu-panel{
+#dd:focus + .Menu-panel{
     display: block;
 }
-#rr:hover + .Menu-panel {
+#rr:focus + .Menu-panel {
   display: block;
+}
+#rr:focus {
+    background-color: rgb(224, 189, 189);
+    border-radius: 50px;
 }
 .Side-main {
     width: 100%;

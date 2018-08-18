@@ -8,11 +8,21 @@ inputNode.addEventListener('keydown', event => {
     // on any key other than Enter, continue as normal
     //if (event.keyCode !== 13 ) return;
    let msgNode = '';
+   
+// edit the time user send a message 
+   let userSendTime = document.querySelectorAll( '.chat-user-time' );
+   let userSendTime2 = document.querySelectorAll( '.chat-user-time2' );
 
     if (event.keyCode === 17) {
+        Array.from( userSendTime ).forEach( function( userTime ){
+            userTime.textContent = new Date().toLocaleTimeString();
+        });
          msgNode = historyNode.querySelector('.Message--in').cloneNode(true);
     }
     else if ( event.keyCode === 13 ) {
+        Array.from( userSendTime2 ).forEach( function( userTime ){
+            userTime.textContent = new Date().toLocaleTimeString();
+        });
         // on Enter key pressed, clone the first message, change its content and prepend
          msgNode = historyNode.querySelector('.Message--out').cloneNode(true);
     } 
@@ -151,7 +161,8 @@ const users = [
     }
 ];
 
-
+    
+//userSendTime.textContent = new Date().toLocaleTimeString();
 
 // writen by roni kiko (RK)
 const chatTabs = document.querySelector('.ChatTabs');
@@ -188,17 +199,15 @@ avatar.forEach( ( ava, i ) => {
 
 
 // Search user filter 
+const searchInput = document.querySelector( '.Search-input' );
 
-const searchInput = document.querySelector('.Search-input');
+searchInput.addEventListener('keyup', function( e ){
 
-
-searchInput.addEventListener('keyup', function(e){
-
-    const chatTab = document.querySelectorAll('.ChatTab');
+    const chatTab = document.querySelectorAll( '.ChatTab' );
     const search = e.target.value.toLowerCase();
 
-    Array.from( avatrName ).forEach( (name, i ) => {
-
+    Array.from( avatrName ).forEach( ( name, i ) => {
+       
         const newName =  name.textContent;
         
         if ( newName.toLowerCase().indexOf( search ) != -1 ) {
