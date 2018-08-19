@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Whatsapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" >
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="App">
-        <aside class="Side">
+  
+        <aside class="Side" id="open-menu">
             <header class="Side-header">
                 <a class="Side-profile" href="#">
                     <img
-                        class="Avatar"
+                        class="side-Avatar"
                         alt="My User"
                         src="https://tinyfac.es/data/avatars/B0298C36-9751-48EF-BE15-80FB9CD11143-500w.jpeg"
                     /> 
@@ -29,8 +31,7 @@
                             <i class="fas fa-angle-down"></i>
                         </button>
                         <section class="Menu-panel">
-                            <div class="Menu-options">
-                                
+                            <div class="Menu-options">                         
                                 <button class="Menu-option"> New Group </a></button>
                                 <button class="Menu-option">Profile</button>
                                 <button class="Menu-option">Archive</button>
@@ -52,7 +53,7 @@
                     </div>
                 </form>
             </div>
-
+      
             <main class="Side-main">
                 <ul class="ChatTabs">
                     <li class="ChatTab">
@@ -71,15 +72,19 @@
                                 consectetur adipisicing elit.
                             </p>
                         </section>
-                    </li>
-                    
+                    </li>                    
                 </ul>
             </main>
         </aside>
-        
+  
         <main class="Chat">
             <header class="Chat-header">
                 <section class="UserInfo">
+                    <div class="mobile-icon">
+                        <a href="#open-menu">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
                     <div class="UserInfo-avatar">
                         <img class="Avatar" id="main-avatar" alt="" src="https://randomuser.me/api/portraits/women/28.jpg" />
                     </div>
@@ -143,7 +148,7 @@
                         </div>
                     </div>
                 </section>
-
+                
                 <section class="Message Message--in">
                     <p class="Message-content" dir="auto">
                         <!-- put somtin here -->

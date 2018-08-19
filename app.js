@@ -29,7 +29,7 @@ inputNode.addEventListener('keydown', event => {
     else {
         return;
     }
-    
+
     event.preventDefault();
 
     msgNode.querySelector('.Message-content').textContent = event.target.value;
@@ -184,7 +184,7 @@ users.forEach(user => {
  const  name = document.querySelector( '.UserInfo-name' );
 
 // Selecting all the users name
- const avatrName = document.querySelectorAll( '.ChatTab-name' );
+ const avatrName = document.querySelectorAll( '.ChatTab-name' )
 
  const isOnline = document.querySelector('.UserInfo-status');
 
@@ -219,4 +219,3 @@ searchInput.addEventListener('keyup', function( e ){
     });
 
 }); 
-
