@@ -184,16 +184,16 @@ users.forEach(user => {
  const  name = document.querySelector( '.UserInfo-name' );
 
 // Selecting all the users name
- const avatrName = document.querySelectorAll( '.ChatTab-name' )
+ const avatrName = document.querySelectorAll( '.ChatTab-name' );
 
  const isOnline = document.querySelector('.UserInfo-status');
 
 avatar.forEach( ( ava, i ) => {
     ava.addEventListener('click', function(){
          mainAvatar.setAttribute('src', this.src);
-         name.textContent = avatrName[i - 1].innerHTML;
+         name.textContent = avatrName[i].innerHTML;
         // checking to see if a iser is onlie or not and print it to the screen!!!
-     const ifOnline =  ( users[ i - 1 ].online ) ? isOnline.textContent = 'Online' : isOnline.textContent = 'Out';
+     const ifOnline =  ( users[i].online ) ? isOnline.textContent = 'Online' : isOnline.textContent = 'Out';
     });
 });
 
@@ -219,3 +219,7 @@ searchInput.addEventListener('keyup', function( e ){
     });
 
 }); 
+
+
+
+

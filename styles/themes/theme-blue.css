@@ -1,0 +1,16 @@
+.theme-blue {
+    background-color: var( --c-gray);
+}
+.theme-blue .Side-header {
+    background-color: var(--c-lighblue);
+    color: #fff;
+}
+.theme-blue .Btn .fas{
+    color: #fff;
+}
+.theme-blue .Chat-header {
+    background-color: var(--c-lighblue);
+}
+.theme-blue .UserInfo-status {
+    color: #fff;
+}

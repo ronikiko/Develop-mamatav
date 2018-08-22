@@ -1,3 +1,8 @@
+@import 'themes/config.css';
+@import 'components/_images.css';
+@import 'themes/theme-blue.css';
+@import 'themes/theme-peach.css';
+
 .hide {
     display: none !important;
 }
@@ -8,7 +13,7 @@
 body {
     margin:0;
     padding:0;
-    background-color: #E7E1DB;
+    /* background-color: #E7E1DB; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .App {
@@ -23,7 +28,7 @@ body {
     flex-direction: column;
 }
 .Side-header {
-    background: #EEEEEE;
+    /* background: #EEEEEE; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,11 +36,6 @@ body {
     padding: 10px;
     border-right: 1px solid #ccc;
 
-}
-.Side-header img {
-    width:40px;
-    height:40px;
-    border-radius: 50%;
 }
 button {
     background: none;
@@ -106,9 +106,6 @@ button i {
 }
 .Btn {
     padding: 1em;
-}
-button.Btn {
-
 }
 .BtnGroup {
     display: flex;
@@ -298,6 +295,7 @@ Time {
 }
 .Side:target {
     display: block;
+    overflow: auto;
   
 }
 /* Media querys for responsive */
@@ -306,11 +304,14 @@ Time {
 
     .Side {
         display: none;
-        overflow: auto;
        
     }
     .UserInfo .mobile-icon {
         display: block;
+    }
+    .ChatTabs {
+       
+        overflow: hidden;
     }
 
 }

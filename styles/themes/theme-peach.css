@@ -1,0 +1,15 @@
+.theme-peach {
+    background-color: var( --c-b-light-yellow );
+}
+.theme-peach .Side-header {
+    background-color: var( --c-yellow);
+}
+.theme-peach .Btn .fas{
+    color: var (  --c-fas-dark-gray );
+}
+.theme-peach .Chat-header {
+    background-color: var( --c-yellow);
+}
+.theme-peach .UserInfo-status {
+    color: #444;
+}
